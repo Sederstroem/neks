@@ -1,0 +1,55 @@
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e1ddd1; /* White background */
+    border: 1px solid #e89e5d; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 16px; /* Padding for the card */
+    margin: 10px; /* Margin between cards */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Center align text */
+}
+.product-card.landscape {
+    flex-direction: row;
+}
+.product-image {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 4px; /* Rounded corners for the image */
+}
+.product-info {
+    display: flex;
+    flex-direction: column; /* Stack info vertically */
+    justify-content: center; /* Center info */
+    padding: 10px; /* Optional padding */
+}
+.product-name {
+    font-size: 1.5rem; /* Larger font for product name */
+    margin: 10px 0 5px; /* Margin around the name */
+}
+
+.product-price {
+    font-size: 1.25rem; /* Medium font for price */
+    color: #e89e5d; /* Accent color for price */
+}
+
+.product-description {
+    font-size: 1rem; /* Regular font size */
+    color: #666666; /* Grey color for description */
+    margin: 5px 0 15px; /* Margin for spacing */
+}
+
+.add-to-cart-button {
+    background-color: #e89e5d; /* Button color */
+    color: #ffffff; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for the button */
+    cursor: pointer; /* Pointer on hover */
+    font-size: 1rem; /* Regular font size */
+}
+
+@media (min-width: 601px) {
+
+}

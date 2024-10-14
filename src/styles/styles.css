@@ -1,0 +1,136 @@
+/* ------------- Header CSS */
+header {
+    display: flex;
+    justify-content: space-between; /* Align items */
+    align-items: center;
+    border-bottom: 2px solid #e89e5d;
+    padding: 10px 20px;
+}
+.header-links {
+    display: flex; /* Show links as flex */
+    flex-direction: column; /* Stack links vertically */
+    align-items: center; /* Center items horizontally */
+    list-style: none;
+    padding: 10px; /* Padding for links */
+}
+.header-links li:not(:last-child) {
+    margin-bottom: .5em;
+}
+.header-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* ------------- Header hamburger menu */
+.hamburger {
+    display: flex; /* Hidden by default */
+    flex-direction: column; /* Stack bars */
+}
+.bar {
+    height: 3px; /* Bar thickness */
+    width: 25px; /* Bar width */
+    background-color: #000; /* Bar color */
+    margin: 3px 0; /* Spacing between bars */
+}
+.nav {
+    display: none; /* Hide nav by default on mobile */
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: linear-gradient(to right, #e89e5d, #e1ddd1);
+    width: 45%;
+    border: 1px solid #e1ddd1;
+    z-index: 1000;
+}
+.nav.open {
+    display: flex; /* Show nav when open */
+    flex-direction: column;
+}
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 1001;
+}
+/* ----------- Footer CSS */
+footer {
+    position: sticky;
+    width: 100%;
+    padding: 20px;
+    background-image: linear-gradient(#e1ddd1, #e89e5d);
+    border-top-color: #e1ddd1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+}
+.footer-links {
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    align-items: center; /* Center items horizontally */
+    list-style: none;
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+.footer-links li {
+    margin: 5px 0; /* Add space between links */
+}
+.footer-link {
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+    color: #000; /* Set link color */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+.footer-link:hover {
+    color: #e1ddd1; /* Change color on hover */
+}
+
+/* ----------------- Social Icons in footer */
+.socialicons {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    border-bottom: 2px solid #e1ddd1;
+    padding: 10px;
+    margin: 5px;
+    gap: 15px;
+}
+.socialicons li {
+    margin: 0;
+}
+.socialicons li .social-icon {
+    width: 30px; /* Adjust size */
+    height: 30px;
+    opacity: 0.6; /* Make it more transparent */
+    filter: grayscale(100%); /* Make it gray */
+    transition: opacity 0.3s ease, filter 0.3s ease; /* Smooth transition */
+}
+.socialicons li .social-icon:hover {
+    opacity: 1; /* On hover, make fully opaque */
+    filter: grayscale(0%); /* On hover, restore original color */
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 601px) {
+    .hamburger {
+        display: none; /* Hide hamburger on larger screens */
+    }
+
+    .nav {
+        display: flex; /* Regular nav for larger screens */
+        position: static; /* Reset position for desktop */
+        width: auto; /* Reset width */
+        background: none; /* Remove background on larger screens */
+    }
+
+    .header-links {
+        display: inline-flex;
+        flex-direction: row; /* Show links horizontally on larger screens */
+    }
+
+    .socialicons {
+        gap: 40px; /* Larger gap for desktop */
+    }
+}
