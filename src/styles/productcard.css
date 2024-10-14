@@ -24,6 +24,22 @@
     justify-content: center; /* Center info */
     padding: 10px; /* Optional padding */
 }
+.product-card.portrait .product-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+    gap: 10px;
+    align-items: start;
+}
+/* Grid layout specific adjustments */
+.product-card.portrait .product-description {
+    grid-column: 2; /* Description in the left column */
+    grid-row: 1 / 4; /* Span multiple rows */
+}
+.product-card.portrait .product-name,
+.product-card.portrait .product-price,
+.product-card.portrait .add-to-cart-button {
+    grid-column: 1; /* Stack these elements in the right column */
+}
 .product-name {
     font-size: 1.5rem; /* Larger font for product name */
     margin: 10px 0 5px; /* Margin around the name */
@@ -42,12 +58,13 @@
 
 .add-to-cart-button {
     background-color: #e89e5d; /* Button color */
-    color: #ffffff; /* Text color */
-    border: none; /* Remove border */
+    color: #000000; /* Text color */
+    border: transparent; /* Remove border */
     border-radius: 4px; /* Rounded corners */
     padding: 10px 15px; /* Padding for the button */
     cursor: pointer; /* Pointer on hover */
     font-size: 1rem; /* Regular font size */
+    min-width: fit-content;
 }
 
 @media (min-width: 601px) {

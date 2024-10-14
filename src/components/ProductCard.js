@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import '../styles/productcard.css'
 export default function ProductCard() {
     // Lazy Load these, probably done in another component but still!
@@ -41,7 +41,11 @@ export default function ProductCard() {
             <div className="product-info">
                 <h2 className="product-name">Vase</h2>
                 <p className="product-price">200€</p>
-                <p className="product-description">Lorem Ipsum</p>
+                <p className="product-description">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                    Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                    Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                    Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                </p>
                 <button className="add-to-cart-button">Add to Cart</button>
             </div>
         </div>
