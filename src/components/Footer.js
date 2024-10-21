@@ -10,7 +10,7 @@ const socialIcons = [
 
 // Define footer link URLs in an array
 const footerLinks = [
-    { url: '/about', label: 'About Me' },
+    { url: '/about', label: 'About NEKS' },
     { url: '/partners', label: 'Partners' },
     { url: '/projects', label: 'Projects' }
 ];

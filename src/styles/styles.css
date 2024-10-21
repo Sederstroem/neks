@@ -20,19 +20,20 @@ header {
     text-decoration: none;
     font-weight: bold;
     color: #000000;
+
 }
 
 /* ------------- Header hamburger menu */
-.hamburger {
-    display: flex; /* Hidden by default */
-    flex-direction: column; /* Stack bars */
-}
-.bar {
-    height: 3px; /* Bar thickness */
-    width: 25px; /* Bar width */
-    background-color: #000; /* Bar color */
-    margin: 3px 0; /* Spacing between bars */
-}
+/*.hamburger {*/
+/*    display: flex; !* Hidden by default *!*/
+/*    flex-direction: column; !* Stack bars *!*/
+/*}*/
+/*.bar {*/
+/*    height: 3px; !* Bar thickness *!*/
+/*    width: 25px; !* Bar width *!*/
+/*    background-color: #000; !* Bar color *!*/
+/*    margin: 3px 0; !* Spacing between bars *!*/
+/*}*/
 .nav {
     display: none; /* Hide nav by default on mobile */
     position: absolute;
@@ -58,7 +59,7 @@ header {
 footer {
     position: sticky;
     width: 100%;
-    padding: 20px;
+    padding: 2px 20px 20px 20px;
     background-image: linear-gradient(#e1ddd1, #e89e5d);
     border-top-color: #e1ddd1;
     bottom: 0;
@@ -128,6 +129,14 @@ footer {
     .header-links {
         display: inline-flex;
         flex-direction: row; /* Show links horizontally on larger screens */
+    }
+    .header-link:hover,
+    .header-link:focus {
+        background-color: #f8e1ca;
+        outline: 2px solid #e89e5d;
+        outline-offset: 4px;
+        color: #000;
+        transition: background-color 0.3s ease, outline 0.3s ease;
     }
 
     .socialicons {

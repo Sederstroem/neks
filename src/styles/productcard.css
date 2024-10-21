@@ -10,6 +10,10 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     text-align: center; /* Center align text */
 }
+.product-name {
+    font-size: 1.5rem; /* Larger font for product name */
+    margin: 10px 0 5px; /* Margin around the name */
+}
 .product-card.landscape {
     flex-direction: row;
 }
@@ -40,33 +44,47 @@
 .product-card.portrait .add-to-cart-button {
     grid-column: 1; /* Stack these elements in the right column */
 }
-.product-name {
-    font-size: 1.5rem; /* Larger font for product name */
-    margin: 10px 0 5px; /* Margin around the name */
-}
-
 .product-price {
     font-size: 1.25rem; /* Medium font for price */
     color: #e89e5d; /* Accent color for price */
 }
-
 .product-description {
     font-size: 1rem; /* Regular font size */
     color: #666666; /* Grey color for description */
     margin: 5px 0 15px; /* Margin for spacing */
 }
-
 .add-to-cart-button {
     background-color: #e89e5d; /* Button color */
     color: #000000; /* Text color */
-    border: transparent; /* Remove border */
-    border-radius: 4px; /* Rounded corners */
-    padding: 10px 15px; /* Padding for the button */
+    border: 0; /* Remove border */
+    outline: 3px solid #FFFFFF;
+    outline-offset: -10px;
+    border-radius: .5em; /* Rounded corners */
+    padding: 20px; /* Padding for the button */
     cursor: pointer; /* Pointer on hover */
+    font-weight: bold;
     font-size: 1rem; /* Regular font size */
     min-width: fit-content;
+    transition: 500ms;
+
+    &:focus {
+        background-color: #FFFFFF; /* Button color */
+        outline: 3px solid #e89e5d;
+        outline-offset: 5px;
+    }
 }
 
 @media (min-width: 601px) {
+    .add-to-cart-button {
+
+        &:hover {
+            background-color: #FFFFFF; /* Button color */
+            outline: 3px solid #e89e5d;
+            outline-offset: 5px;
+        }
+        &:focus {
+            outline: thin dotted;
+        }
+    }
 
 }

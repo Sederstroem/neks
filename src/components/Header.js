@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import CloseButton from "./CloseButton";
+import { RxHamburgerMenu } from "react-icons/rx";
+
 
 export default function Header() {
     const [ isOpen, setIsOpen ] = useState(false);
@@ -12,11 +14,12 @@ export default function Header() {
 
                 {/* Hamburger Icon */}
                 {!isOpen && (
-                    <div className="hamburger" onClick={toggleMenu}>
-                        <span className="bar"></span>
-                        <span className="bar"></span>
-                        <span className="bar"></span>
-                    </div>
+                    <RxHamburgerMenu onClick={toggleMenu} size={30}/>
+                    // <div className="hamburger" onClick={toggleMenu}>
+                    //     <span className="bar"></span>
+                    //     <span className="bar"></span>
+                    //     <span className="bar"></span>
+                    // </div>
                 )}
 
                 {/* Close Button */}
